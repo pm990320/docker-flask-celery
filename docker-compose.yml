@@ -1,0 +1,10 @@
+version: '2'
+services:
+  app:
+    build: .
+    ports:
+      - "80:80"
+    links:
+      - redis
+  redis:
+    image: redis
